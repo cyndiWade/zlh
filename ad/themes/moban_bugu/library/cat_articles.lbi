@@ -1,0 +1,11 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--68ecshop开发中心版权所有--><h1 class="mod2tit" style="height:0"><a href="{$articles_cat.url}" class="more" style="margin-top:3px;">更多</a></h1>
+<div class="mod2con clearfix">
+    <ul>
+     <!--{foreach from=$articles item=article_item}-->
+    <li style="display:inline; width:194px; overflow:hidden; height:23px; line-height:23px;" class="fl"><a href="{$article_item.url}" title="{$article_item.title|escape:html}" class="txtdot">{$article_item.short_title}</a></li>
+    <!--{/foreach}-->
+    </ul>
+</div>
+
+<script type="text/javascript">divheight("catArticles");</script>

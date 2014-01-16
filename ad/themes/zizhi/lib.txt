@@ -1,0 +1,85 @@
+<!-- TemplateBeginEditable name="×ó±ßÇøÓò" -->
+	
+<!-- #BeginLibraryItem "/library/cart.lbi" -->
+
+	<!-- #EndLibraryItem -->
+	
+<!-- #BeginLibraryItem "/library/category_tree.lbi" -->
+
+	
+<!-- #EndLibraryItem -->
+
+	<!-- #BeginLibraryItem "/library/top10.lbi" -->
+
+	<!-- #EndLibraryItem -->
+	
+<!-- #BeginLibraryItem "/library/promotion_info.lbi" -->
+
+	<!-- #EndLibraryItem -->
+
+	<!-- #BeginLibraryItem "/library/order_query.lbi" -->
+
+	<!-- #EndLibraryItem -->
+
+	<!-- #BeginLibraryItem "/library/invoice_query.lbi" -->
+
+	<!-- #EndLibraryItem -->
+	
+<!-- #BeginLibraryItem "/library/vote_list.lbi" -->
+
+	<!-- #EndLibraryItem -->
+	
+<!-- #BeginLibraryItem "/library/email_list.lbi" -->
+
+	
+<!-- #EndLibraryItem -->
+
+<!-- TemplateEndEditable -->
+
+
+
+<!-- TemplateBeginEditable name="ÓÒ±ßÖ÷ÇøÓò" -->
+   
+<!-- #BeginLibraryItem "/library/recommend_best.lbi" -->
+
+
+   <!-- #EndLibraryItem -->
+
+   <!-- #BeginLibraryItem "/library/recommend_new.lbi" -->
+
+
+   <!-- #EndLibraryItem -->
+
+   <!-- #BeginLibraryItem "/library/recommend_hot.lbi" -->
+
+
+   <!-- #EndLibraryItem -->
+
+   <!-- #BeginLibraryItem "/library/auction.lbi" -->
+
+   <!-- #EndLibraryItem -->
+   
+<!-- #BeginLibraryItem "/library/group_buy.lbi" -->
+
+   <!-- #EndLibraryItem -->
+
+<!-- TemplateEndEditable -->
+
+
+<!-- #BeginLibraryItem "/library/help.lbi" -->
+<!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" -->
+<!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/recommend_promotion.lbi" -->
+<!-- #EndLibraryItem -->
+
+<!-- #BeginLibraryItem "/library/brands.lbi" -->
+<!-- #EndLibraryItem -->
+
+<!-- #BeginLibraryItem "/library/new_articles.lbi" -->
+<!-- #EndLibraryItem -->
+
+<!-- #BeginLibraryItem "/library/page_header.lbi" -->
+<!-- #EndLibraryItem -->
+
+<!-- #BeginLibraryItem "/library/ur_here.lbi" --><!-- #EndLibraryItem -->

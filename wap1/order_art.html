@@ -1,0 +1,114 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<meta HTTP-EQUIV="Expires" CONTENT="-1">
+<title>订单详情</title>
+<link rel="stylesheet" type="text/css" href="css/default.css" />
+<script type="text/javascript" src="js/html5.js"></script>
+<script type="text/javascript" src="js/jquery.min.1.9.1.js"></script>
+<script src="js/zebra_datepicker.js"></script>
+<!--移动端版本兼容 -->
+<script type="text/javascript">
+		var phoneWidth =  parseInt(window.screen.width);
+		var phoneScale = phoneWidth/640;
+		var isAndroid = RegExp("Android").test(navigator.userAgent);
+		if (isAndroid) {
+			document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');
+		} else {
+			document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+		}
+	</script>
+<script src="js/common.js"></script>
+
+<!--移动端版本兼容 end -->
+
+</head>
+
+<body>
+<!--fly_css-->
+<div >
+  <div class="m_nav f34"><span class="left"><a href="#"><img src="images/m_dot1.png"></a></span>
+    <h6 align="center">订单填写</h6>
+     </div>
+     <div class="blank8"></div>
+  <div class="autohei m_boxbg1">
+   	<div class="m_txt1 "><span class="left f30 zx5">上海浦东四季酒店</span></div>
+        <div class="blank"></div>
+    <div class="m_txt1"><span class="zx2 f22">入住：</span><input type="text"  clicktag="2_2" class="stclick inp3" value="入住时间" name="" id="checkinday" readonly="readonly"> <span class="zx2 f22">离店：</span> <input type="text" clicktag="2_3" class="stclick inp3" value="退房时间" name="" id="checkoutday" readonly="readonly"></div>
+  </div>
+  <div class="blank1"></div>
+  <div class="m_boxbg1 padding0 jd_info">
+  	<ul>
+    	<li><span class="left zx2 f24">商务标准间</span> <span class="right zx7 f24">间</span> <input type="number" value="1" class="inp2 right"></li>
+        <li style="border-bottom:none;"><span class="left zx2 f24 wit120">入住人</span> <input type="text" class="left inp1" placeholder="元开威客" /> <span class="right zx4 f20 detail"><a href="javascript:;">详情</a></span></li>
+    </ul>
+  </div>
+  <div class="blank1"></div>
+  <div class="m_boxbg1 padding0 jd_info">
+  	<ul>
+    	<li><span class="left zx2 f24 wit120">联系人</span>  <input type="text" class="left inp1" placeholder="元开威客" /></li>
+      <li><span class="left zx2 f24 wit120">手机</span>  <input type="tel" class="left inp1" placeholder="13100000000" /></li>
+      <li><span class="left zx2 f24 wit120">到店时间</span> <!--<span class="right zx7 f20">20点之前</span>--><input type="tel" class="right inp2" placeholder="20点之前" /></li>
+      <li style="border-bottom:none;"><span class="left zx2 f24 wit120">特殊要求</span> <textarea type="tel" class="right inp2" placeholder="20点之前"></textarea></li>
+        
+    </ul>
+  </div>
+  <div class="blank1"></div>
+  <div class="beizhu">
+  	<div class="beizhubox">
+    	<p>酒店14：00办理入住，早到可能需要等待</p>
+    </div>
+  </div>
+  <div class="blank8"></div>
+  <div class="foot_dd">
+  	<span class="left f30">订单总额：550元</span>
+    <span class="right"><a href="#"><img src="images/submit.jpg"></a></span>
+  </div>
+</div>
+
+<div class="show hide">
+	<div class="topclose"><span class="right close"><a href="javascript:;"><img src="images/close.png"></a></span></div>
+    <div align="center"><img src="images/detail_img2.jpg"></div>
+    <div class="jdxq f24">
+    	<ul>
+        	<li>
+            	<div class="left">
+                	<span class="icon1 zx3">面积:</span><span class="zx8">80平方</span>
+                </div>
+                <div class="left">
+                	<span class="icon2 zx8">可住2人</span>
+                </div>
+            </li>
+            <li>
+            	<div class="left">
+                	<span class="icon3 zx3">楼层:</span><span class="zx8">18楼</span>
+                </div>
+                <div class="left">
+                	<span class="icon4 zx8">该房型不可加床</span>
+                </div>
+            </li>
+            <li>
+            	<span class="icon5 zx3">床型:</span><span class="zx8">大床2米</span>
+            </li>
+            <li>
+            	<span class="icon6 zx3">无烟:</span><span class="zx8">有无烟房</span>
+            </li>
+            <li>
+            	<span class="icon6 zx3">宽带:</span><span class="zx8">免费宽带</span>
+            </li>
+        </ul>
+        <div class="autohei price1">
+        	<span class="left zx7"><small>￥</small>400</span>
+           	<span class="right"><img src="images/detail_txt2.png"></span>
+        </div>
+    </div>
+</div>
+<div class="backdiv hide"></div>
+
+</body>
+</html>

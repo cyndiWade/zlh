@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<meta HTTP-EQUIV="Expires" CONTENT="-1">
+<title>订单详情</title>
+{insert_scripts files='html5.js,jquery.min.1.9.1.js,common1.js,transport.js'}
+<link rel="stylesheet" type="text/css" href="themes/default/default.css" />
+<!--移动端版本兼容 -->
+<script type="text/javascript">
+		var phoneWidth =  parseInt(window.screen.width);
+		var phoneScale = phoneWidth/640;
+		var isAndroid = RegExp("Android").test(navigator.userAgent);
+		if (isAndroid) {
+			document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');
+		} else {
+			document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+		}
+
+function submit_order(){
+   var Inperson       = document.getElementById('Inperson').value;
+   var telperson      = document.getElementById('telperson').value;
+   var tel            = document.getElementById('tel').value;
+   if(!Inperson){
+     alert('填写入住人');
+     return false;
+   }
+   if(!telperson){
+     alert('填写联系人');
+     return false;
+   }
+   
+   if(!tel){
+     alert('请填写手机号');
+     return false;
+   }
+}
+
+//选择房间之后改变价格
+
+function changePrice(){
+   var house = document.getElementById('house').value;
+   var checkinday       = document.getElementById('checkinday').value;
+   var checkoutday      = document.getElementById('checkoutday').value;
+   var link_id          = document.getElementById('link_id').value;
+   Ajax.call('ajax.php?act=changePrice&house=' + house+'&link_id='+link_id+'&checkinday='+checkinday+'&checkoutday='+checkoutday, '', rep_change_price, 'GET', 'TEXT');
+}
+
+function rep_change_price(text)
+{
+
+  document.getElementById('order_total').innerHTML = '订单总额：'+text+'元';
+  document.getElementById('order_total1').value = text;
+}
+</script>
+
+<!--移动端版本兼容 end -->
+
+</head>
+
+<body>
+<!--fly_css-->
+
+<div >
+<form name="form" id="form" action="order.php" method="post" onsubmit="return submit_order()" />
+  <div class="m_nav f34">
+  <span class="left">
+  <a href="javascript:history.back();"><img src="images/m_dot1.png"></a></span>
+    <h6 align="center">订单填写</h6>
+     </div>
+     <div class="blank8"></div>
+  <div class="autohei m_boxbg1">
+   	<div class="m_txt1 "><span class="left f30 zx5">{$hotel.link_name}</span></div>
+        <div class="blank"></div>
+    <div class="m_txt1">
+    <span class="zx2 f22 left">入住时间：</span> 
+    <span class="zx5 f22 left">{$checkinday}</span> 
+    <span class="zx2 f22 left padding_15">退房时间：</span> 
+    <span class="zx5 left f22"> {$checkoutday}</span>
+    <input type="hidden" value="{$checkinday}" name="checkinday"   id="checkinday"/>
+    <input type="hidden" value="{$checkoutday}" name="checkoutday"  id ="checkoutday"/>
+    </div>
+  </div>
+  <div class="blank1"></div>
+  <div class="m_boxbg1 padding0 jd_info">
+  	<ul>
+    	<li><span class="left zx2 f24">{$hotel.hotel_fx}商务标准间</span> 
+	<select id='house' name='house' class="right zx7 f20 sel1" onchange="changePrice()" >
+            <option value="1" selected>1间</option>
+            <option value="2">2间</option>
+            <option value="4">3间</option>
+            <option value="4">4间</option>
+            <option value="5">5间</option>
+            <option value="6">6间</option>
+            <option value="7">7间</option>
+            <option value="8">8间</option>
+      </select></li>
+        <li style="border-bottom:none;">
+	<span class="left zx2 f24 wit120">入住人</span> 
+	<input type="text" id="Inperson" name="Inperson" class="left inp1" placeholder="" /> 
+	<span class="right zx4 f20 detail"><a href="javascript:;">详情</a></span>
+	</li>
+    </ul>
+  </div>
+  <div class="blank1"></div>
+  <div class="m_boxbg1 padding0 jd_info">
+  	<ul>
+    	<li><span class="left zx2 f24 wit120">联系人</span>  
+	<input type="text" id="telperson" name="telperson" class="left inp1" placeholder="" /></li>
+      <li><span class="left zx2 f24 wit120">手机</span>  
+      <input type="tel" class="left inp1" id="tel" name="tel" placeholder="" /></li>
+      <li><span class="left zx2 f24 wit120">到店时间</span> 
+      <select class="right zx7 f20 sel1" name="checkintime" >
+            <option value="14点" selected>14点之前</option>
+            <option value="16点">16点之前</option>
+            <option value="18点">18点之前</option>
+            <option value="20点">20点之前</option>
+            <option value="22点">22点之前</option>
+            <option value="23点">23点之前</option>
+      </select></li>
+      <li style="border-bottom:none;">
+      <span class="left zx2 f24 wit120">特殊要求</span> 
+      <textarea type="tel" name="yq" class="right inp2" placeholder="20点之前"></textarea>
+      </li>
+        
+    </ul>
+  </div>
+  <div class="blank1"></div>
+  <div class="beizhu">
+  	<div class="beizhubox">
+    	<p>酒店14：00办理入住，早到可能需要等待</p>
+    </div>
+  </div>
+  <div class="blank8"></div>
+  <div class="foot_dd">
+        <input id="link_id" name="hotel_id" type="hidden" value="{$hotel.link_id}" />
+  	<span class="left f30" id="order_total" >订单总额：{$hotel.price}元</span>
+	<input type="hidden" value="{$hotel.price}" name="order_total" id="order_total1" />
+    <span class="right"><input type="image" src="images/submit.jpg" /></span>
+  </div>
+</from>
+</div>
+
+
+
+<div class="show hide">
+	<div class="topclose"><span class="right close"><a href="javascript:;"><img src="images/close.png"></a></span></div>
+    <div align="center"><img src="images/detail_img2.jpg"></div>
+    <div class="jdxq f24">
+    	<ul>
+        	<li>
+            	<div class="left">
+                	<span class="icon1 zx3">面积:</span><span class="zx8">80平方</span>
+                </div>
+                <div class="left">
+                	<span class="icon2 zx8">可住2人</span>
+                </div>
+            </li>
+            <li>
+            	<div class="left">
+                	<span class="icon3 zx3">楼层:</span><span class="zx8">18楼</span>
+                </div>
+                <div class="left">
+                	<span class="icon4 zx8">该房型不可加床</span>
+                </div>
+            </li>
+            <li>
+            	<span class="icon5 zx3">床型:</span><span class="zx8">大床2米</span>
+            </li>
+            <li>
+            	<span class="icon6 zx3">无烟:</span><span class="zx8">有无烟房</span>
+            </li>
+            <li>
+            	<span class="icon6 zx3">宽带:</span><span class="zx8">免费宽带</span>
+            </li>
+        </ul>
+        <div class="autohei price1">
+        	<span class="left zx7"><small>￥</small>400</span>
+           	<span class="right"><img src="images/detail_txt2.png"></span>
+        </div>
+    </div>
+</div>
+<div class="backdiv hide"></div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<meta HTTP-EQUIV="Expires" CONTENT="-1">
+<title>酒店列表</title>
+<link rel="stylesheet" type="text/css" href="css/default.css" />
+<script type="text/javascript" src="js/html5.js"></script>
+<!--移动端版本兼容 -->
+<script type="text/javascript">
+		var phoneWidth =  parseInt(window.screen.width);
+		var phoneScale = phoneWidth/640;
+		var isAndroid = RegExp("Android").test(navigator.userAgent);
+		if (isAndroid) {
+			document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');
+		} else {
+			document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+		}
+	</script>
+<!--移动端版本兼容 end -->
+</head>
+
+<body>
+<!--fly_css-->
+<div >
+  <div class="m_nav f34"><span class="right"><a href="#">地图</a></span>
+    <h6  class="left padding_60">酒店列表</h6></div>
+    <div class="blank8"></div>
+  <div class="m_jdlist">
+    <ul>
+      <li>
+        <div class="autohei"> <span class="left m_img1"><img src="images/small.jpg" width="80" height="80"></span>
+          <div class="autohei">
+            <div class="m_txt1 autohei"> <span class="left zx5 f24">上海浦东四级酒店</span> <span class="right zx2 f18">5星级</span> </div>
+            <div class="m_txt1 autohei"> <span class="left zx1 f24">5分</span> <span class='right zx7 f22'><small>￥</small>400起</span> </div>
+            <div class="m_txt2"><span class="f24 zx2">浦东陆家嘴金融中心</span> </div>
+          </div>
+        </div>
+      </li>
+       <li>
+        <div class="autohei"> <span class="left m_img1"><img src="images/small.jpg" width="80" height="80"></span>
+          <div class="autohei">
+            <div class="m_txt1 autohei"> <span class="left zx5 f24">上海浦东四级酒店</span> <span class="right zx2 f18">5星级</span> </div>
+            <div class="m_txt1 autohei"> <span class="left zx1 f24">5分</span> <span class='right zx7 f22'><small>￥</small>400起</span> </div>
+            <div class="m_txt2"><span class="f24 zx2">浦东陆家嘴金融中心</span> </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="autohei"> <span class="left m_img1"><img src="images/small.jpg" width="80" height="80"></span>
+          <div class="autohei">
+            <div class="m_txt1 autohei"> <span class="left zx5 f24">上海浦东四级酒店</span> <span class="right zx2 f18">5星级</span> </div>
+            <div class="m_txt1 autohei"> <span class="left zx1 f24">5分</span> <span class='right zx7 f22'><small>￥</small>400起</span> </div>
+            <div class="m_txt2"><span class="f24 zx2">浦东陆家嘴金融中心</span> </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="autohei"> <span class="left m_img1"><img src="images/small.jpg" width="80" height="80"></span>
+          <div class="autohei">
+            <div class="m_txt1 autohei"> <span class="left zx5 f24">上海浦东四级酒店</span> <span class="right zx2 f18">5星级</span> </div>
+            <div class="m_txt1 autohei"> <span class="left zx1 f24">5分</span> <span class='right zx7 f22'><small>￥</small>400起</span> </div>
+            <div class="m_txt2"><span class="f24 zx2">浦东陆家嘴金融中心</span> </div>
+          </div>
+        </div>
+      </li>
+       
+       
+    </ul>
+  </div>
+</div>
+</body>
+</html>

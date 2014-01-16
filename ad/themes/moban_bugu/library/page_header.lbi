@@ -1,0 +1,126 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+var process_request = "{$lang.process_request}";
+var btn_buy = "{$lang.btn_buy}";
+var is_cancel = "{$lang.is_cancel}";
+var select_spe = "{$lang.select_spe}";
+</script>
+<script language="javascript"> 
+<!--
+/*屏蔽所有的js错误*/
+function killerrors() { 
+return true; 
+} 
+window.onerror = killerrors; 
+//-->
+</script>
+<!--[if IE 6]>
+<script type="text/javascript">
+try { document.execCommand('BackgroundImageCache', false, true); } catch(e) {}
+</script>
+<![endif]-->
+<script language="javascript"> 
+<!--
+/*屏蔽所有的js错误*/
+function killerrors() { 
+return true; 
+} 
+window.onerror = killerrors; 
+//-->
+</script>
+<SCRIPT>
+function ask(txt) {
+return window.confirm(txt);
+}
+function bookmark(){
+if(ask("要将本站点加入收藏夹吗？")) {
+  var title = document.title
+  var domain = window.location.hostname;
+  var url = window.location.href;
+  if( document.all ) { // ie
+   window.external.AddFavorite(url, title);
+  } else if (window.sidebar) { // firefox
+   window.sidebar.addPanel(title, url, title);
+  }
+}
+}
+</SCRIPT> 
+<div id="topbar">
+    <div class="toptip">
+         {insert_scripts files='transport.js,utils.js'}
+   <font id="ECS_MEMBERZONE">{* ECSHOP 提醒您：根据用户id来调用member_info.lbi显示不同的界面  *}{insert name='member_info'} </font>
+    </div>
+    <div id="toplink"><a href="user.php">用户中心</a>│<a href="article.php?id=26">投诉建议</a>│<a onclick=bookmark(); href="javascript: void 0;">收藏本站</a> <strong>400-888-8888</strong></div>
+</div>
+<div id="header">
+  <div id="top" class="clearfix" style="clear:both;">
+      <h1 id="logo"><a href="index.php"><img src="images/logo.gif" width="232" height="70" alt="布谷网-网购家具第一站" /></a></h1>
+      <div id="topr">
+      <div id="snav">
+         <div class="snavl">
+         
+         <script type="text/javascript">
+    {literal}
+    <!--
+    function checkSearchForm()
+    {
+        if(document.getElementById('keyword').value !="请输入产品编号或关键词" && document.getElementById('keyword').value !='')
+        {
+            return true;
+        }
+        else
+        {
+            alert("{$lang.no_keywords}");
+            return false;
+        }
+    }
+    -->
+    {/literal}
+    </script>
+         
+        <FORM id="searchForm"  name="searchForm"  method="get" action="search.php" onSubmit="return checkSearchForm()">
+        <div id="searchbar">
+           <input type="text" class="stxt" id="keyword" name="keywords" onfocus="if(this.value=='请输入产品编号或关键词'){this.value='';}" onblur="if(this.value==''){this.value='请输入产品编号或关键词';}" value="请输入产品编号或关键词"/>
+           
+              <input type="submit" class="sbtn" title="搜索" value="搜索" />
+           
+           </div>
+</form>		
+
+        <div class="keyword"><label>热门专区:</label>
+ {foreach from=$searchkeywords item=val}
+   <a href="search.php?keywords={$val|escape:url}">{$val}</a>&nbsp;&nbsp;
+   {/foreach}
+ </div>
+        </div>
+        
+         <div class="snavr">
+		    <div class="cart"><img src="images/gouwuche.jpg" width="54" height="40" /></div>
+		    <div class="text">{insert name='cart_info'}</div>
+		        <div class="goto"><a href="flow.php"><img src="images/jiesuan.jpg" width="57" height="21" border="0" /></a></div>
+        </div>
+	   </div>
+	  </div>
+  </div>
+  
+  <div id="navbox">    
+<div id="nav">
+
+      <div class="mainNav">
+        <ul>
+          <li class="pli">
+          <a href="index.php" class="pnav"><b>首页</b></a>
+          </li>
+          <!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
+          <li {if $nav.opennew eq 1} target="_blank" {/if} class="pli"><a href="{$nav.url}" class="pnav" target="_blank"><b>{$nav.name}</b></a>
+              
+          </li>
+          <!-- {/foreach} -->
+        </ul>
+      </div>
+    </div>
+    </div>
+</div>
+
+
+<div class="blank"></div>

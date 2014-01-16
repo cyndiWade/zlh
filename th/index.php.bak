@@ -1,0 +1,45 @@
+<?php
+header('Content-Type:text/html;charset=utf-8');
+//session_start();
+include 'mysql.class.php';
+//define your token
+define("TOKEN", "rikee");	//身份信息
+$wechatObj = new wechatCallbackapiTest();
+$wechatObj->valid();     //端口验证，交互数据时，要关闭
+class wechatCallbackapiTest
+{
+
+	public function valid()	
+    {
+        $echoStr = $_GET["echostr"];
+
+        //valid signature , option
+        if($this->checkSignature()){
+        	echo $echoStr;
+        	exit;
+        }
+    }	
+    //身份验证
+	private function checkSignature()
+	{
+        $signature = $_GET["signature"];
+        $timestamp = $_GET["timestamp"];
+        $nonce = $_GET["nonce"];	
+        		
+		$token = TOKEN;
+		$tmpArr = array($token, $timestamp, $nonce);
+		sort($tmpArr);
+		$tmpStr = implode( $tmpArr );
+		$tmpStr = sha1( $tmpStr );
+		
+		if( $tmpStr == $signature ){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	/**************************************************/
+
+}
+
+?>

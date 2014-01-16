@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<meta HTTP-EQUIV="Expires" CONTENT="-1">
+<title>酒店详情页</title>
+<link rel="stylesheet" type="text/css" href="themes/default/default.css" />
+{insert_scripts files='html5.js,jquery.min.1.9.1.js,zebra_datepicker.js,common1.js'}
+<!--移动端版本兼容 -->
+<script type="text/javascript">
+		var phoneWidth =  parseInt(window.screen.width);
+		var phoneScale = phoneWidth/640;
+		var isAndroid = RegExp("Android").test(navigator.userAgent);
+		if (isAndroid) {
+			document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');
+		} else {
+			document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+		}
+function submit_order(id){
+      var checkinday  = document.getElementById('checkinday').value;
+      var checkoutday = document.getElementById('checkoutday').value;
+      if(checkinday=='入住时间'){
+        alert('选择入住时间');
+        return flase;
+      }
+      if(checkoutday=='退房时间'){
+        alert('选择退房时间');
+        return flase;
+      }
+      window.location.href="order.php?id="+id+'&checkinday='+checkinday+'&checkoutday='+checkoutday;
+}	
+</script>
+<!--移动端版本兼容 end -->
+</head>
+
+<body>
+<!--fly_css-->
+<div >
+  <div class="m_nav f34"><span class="left"><a href="hotel_list.php">
+  <img src="images/m_dot1.png"></a></span>
+    <h6 align="center">酒店详情</h6>
+     </div>
+     <div class="blank8"></div>
+  <div class="autohei m_boxbg1">
+  	<div class="right m_img2">
+    	<div><Img src="images/detail_img1.png">
+	<div class="touying">
+	</div><P align="center">19张</P></div>
+    </div>
+    <div class="autohei">
+    	<div class="m_txt1">
+	<span class="left f30 zx6">{$hotel.link_name}</span> 
+	<span class="zx1 f24 padding_15">{$hotel.hotel_pf}分</span>
+	</div>
+        <div class="m_txt1">
+	<span class="zx2 f22">{$hotel.hotel_xj}星级酒店</span>
+	</div>
+    </div>
+  </div>
+  <div class="blank1"></div>
+  <div class="m_boxbg1 padding0 jd_info">
+  	<ul>
+    	<li><span class="left m_dot1 zx2 f24">{$hotel.hotel_syq}</span> 
+	<span class="right m_dot4 zx4 f20"><a href="hotel_map.php?id={$hotel.link_id}">地图</a></span></li>
+        <li style="border-bottom:none;">
+	<span class="left m_dot2 zx2 f24">{$hotel.hotel_kynf}年开业</span> 
+	<span class="right m_dot4 zx4 f20 detail">
+	<a href="javascript:;">详情</a></span>
+	</li>
+    </ul>
+  </div>
+  <div class="blank1"></div>
+
+  <div class="m_boxbg1 zx2 autohei ">
+  	<span class="left m_dot3 f24">入住： </span> 
+	<input type="text"  clicktag="2_2" class="stclick inp3 left" value="入住时间" name="" id="checkinday" readonly="readonly"> 
+	<span class="left f24 padding_15">退房： </span>   
+	<input type="text" clicktag="2_3" class="stclick inp3 left" value="退房时间" name="" id="checkoutday" readonly="readonly">
+  </div>
+  <div class="jdlist2">
+     <ul>
+    	<li>
+        	<div class="right">
+            	<P class="zx7 f30"><small>￥</small><span>{$hotel.hotel_1}</span></P>
+                <div class="blank"></div>
+                <div align="center"><a href="javascript:void(0)" onclick="submit_order({$hotel.link_id})" >
+		<img src="images/detail_txt2.png">
+		</a>
+		</div>
+            </div>
+            <div class="autohei">
+            	<span class="left"><img src="images/small.jpg" width="80" height="80"></span>
+                <div class="autohei">
+                	<p class="zx6 f24">{$hote.link_name}</p>
+                      <div class="blank"></div>
+                    <P class="zx2 f24">{$hotel.hotel_fx}</P>
+                </div>
+            </div>
+        </li>
+        
+    </ul>
+  </div>
+</div>
+
+<div class="show hide">
+	<div class="topclose"><span class="right close"><a href="javascript:;"><img src="images/close.png"></a></span></div>
+    <div align="center"><img src="images/detail_img2.jpg"></div>
+    <div class="jdxq f24">
+    	<ul>
+        	<li>
+            	<div class="left">
+                	<span class="icon1 zx3">面积:</span><span class="zx8">80平方</span>
+                </div>
+                <div class="left">
+                	<span class="icon2 zx8">可住2人</span>
+                </div>
+            </li>
+            <li>
+            	<div class="left">
+                	<span class="icon3 zx3">楼层:</span><span class="zx8">18楼</span>
+                </div>
+                <div class="left">
+                	<span class="icon4 zx8">该房型不可加床</span>
+                </div>
+            </li>
+            <li>
+            	<span class="icon5 zx3">床型:</span><span class="zx8">大床2米</span>
+            </li>
+            <li>
+            	<span class="icon6 zx3">无烟:</span><span class="zx8">有无烟房</span>
+            </li>
+            <li>
+            	<span class="icon6 zx3">宽带:</span><span class="zx8">免费宽带</span>
+            </li>
+        </ul>
+        <div class="autohei price1">
+        	<span class="left zx7"><small>￥</small>400</span>
+           	<span class="right"><img src="images/detail_txt2.png"></span>
+        </div>
+    </div>
+</div>
+<div class="backdiv hide"></div>
+</body>
+</html>

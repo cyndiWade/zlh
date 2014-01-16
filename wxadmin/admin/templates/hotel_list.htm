@@ -1,0 +1,111 @@
+<!-- $Id: link_list.htm 14216 2008-03-10 02:27:21Z testyang $ -->
+{if $full_page}
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+
+<form method="post" action="" name="listForm">
+<!-- start ads list -->
+<div class="list-div" id="listDiv">
+{/if}
+
+<table cellpadding="3" cellspacing="1">
+  <tr>
+    <th><a href="javascript:listTable.sort('link_name'); "></a>酒店名称</th>
+	<th><a href="javascript:listTable.sort('link_url'); ">省份</a></th>
+	<th><a href="javascript:listTable.sort('link_url'); ">城市</a></th>
+	<th><a href="javascript:listTable.sort('link_url'); ">区</a></th>
+	<th><a href="javascript:listTable.sort('link_url'); ">星级</a></th>
+    <th><a href="javascript:listTable.sort('link_url'); ">评分</a></th>
+	<th><a href="javascript:listTable.sort('link_url'); ">评分人数</a></th>
+    <th><a href="javascript:listTable.sort('link_logo'); ">电话</a></th>
+	<th><a href="javascript:listTable.sort('link_logo'); ">开业年份</a></th>
+	<th><a href="javascript:listTable.sort('link_logo'); ">装修年份</a></th>
+	<th><a href="javascript:listTable.sort('link_logo'); ">商业圈</a></th>
+    <th><a href="javascript:listTable.sort('link_logo'); ">地址</a></th>
+	<th><a href="javascript:listTable.sort('link_logo'); ">纬度(Y)</a></th>
+	<th><a href="javascript:listTable.sort('link_logo'); ">经度(X)</a></th>
+	<th><a href="javascript:listTable.sort('link_logo'); ">交通信息</a></th>
+	<th><a href="javascript:listTable.sort('link_logo'); ">简介</a></th>
+	<th><a href="javascript:listTable.sort('link_logo'); ">房型</a></th>
+    <th><a href="javascript:listTable.sort('link_logo'); ">房型信息</a></th>
+	<th><a href="javascript:listTable.sort('link_logo'); ">周一</a></th>
+	<th><a href="javascript:listTable.sort('link_logo'); ">周二</a></th>
+	<th><a href="javascript:listTable.sort('link_logo'); ">周三</a></th>
+	<th><a href="javascript:listTable.sort('link_logo'); ">周三</a></th>
+	<th><a href="javascript:listTable.sort('link_logo'); ">周五</a></th>
+	<th><a href="javascript:listTable.sort('link_logo'); ">周六</a></th>
+	<th><a href="javascript:listTable.sort('link_logo'); ">周日</a></th>
+	<th><a href="javascript:listTable.sort('link_logo'); ">预付价</a></th>
+	<th><a href="javascript:listTable.sort('link_logo'); ">来源</a></th>
+	<th><a href="javascript:listTable.sort('link_logo'); ">备注</a></th>
+
+    <th><a href="javascript:listTable.sort('show_order'); ">排序</a></th>
+    <th>{$lang.handler}</th>
+  </tr>
+  <tr>
+  {foreach from=$links_list item=link}
+  <tr>
+    <td class="first-cell"><span onclick="listTable.edit(this, 'edit_link_name', {$link.link_id})">{$link.link_name|escape:html}</span></td>
+    <td align="left"><span>{$link.hotel_sf}</span></td>
+    <td align="center"><span>{$link.hotel_cs}</span></td>
+
+    <td align="right"><span >{$link.hotel_q}</span></td>
+	<td align="right"><span >{$link.hotel_xj}</span></td>
+	<td align="right"><span >{$link.hotel_pf}</span></td>
+	<td align="right"><span >{$link.hotel_pfrs}</span></td>
+	<td align="right"><span onclick="listTable.edit(this, 'edit_show_order', {$link.link_id})">{$link.hotel_tel}</span></td>
+	<td align="right"><span >{$link.hotel_kynf}</span></td>
+	<td align="right"><span >{$link.hotel_zxnf}</span></td>
+	<td align="right"><span >{$link.hotel_syq}</span></td>
+	<td align="right"><span >{$link.hotel_dz}</span></td>
+	<td align="right"><span onclick="listTable.edit(this, 'edit_location_x', {$link.link_id})" >{$link.hotel_location_x}</span></td>
+	<td align="right"><span onclick="listTable.edit(this, 'edit_location_y', {$link.link_id})">{$link.hotel_location_y}</span></td>
+	<td align="right"><span >{$link.hotel_jtxx}</span></td>
+	<td align="right"><span >{$link.hotel_jj}</span></td>
+	<td align="right"><span >{$link.hotel_fx}</span></td>
+	<td align="right"><span >{$link.hotel_fxxx}</span></td>
+	<td align="right"><span onclick="listTable.edit(this, 'edit_show_order', {$link.link_id})">{$link.hotel_1}</span></td>
+	<td align="right"><span onclick="listTable.edit(this, 'edit_show_order', {$link.link_id})">{$link.hotel_2}</span></td>
+	<td align="right"><span onclick="listTable.edit(this, 'edit_show_order', {$link.link_id})">{$link.hotel_3}</span></td>
+	<td align="right"><span onclick="listTable.edit(this, 'edit_show_order', {$link.link_id})">{$link.hotel_4}</span></td>
+	<td align="right"><span onclick="listTable.edit(this, 'edit_show_order', {$link.link_id})">{$link.hotel_5}</span></td>
+	<td align="right"><span onclick="listTable.edit(this, 'edit_show_order', {$link.link_id})">{$link.hotel_6}</span></td>
+	<td align="right"><span onclick="listTable.edit(this, 'edit_show_order', {$link.link_id})">{$link.hotel_7}</span></td>
+	<td align="right"><span onclick="listTable.edit(this, 'edit_show_order', {$link.link_id})">{$link.hotel_yfj}</span></td>
+	<td align="right"><span >{$link.hotel_ll}</span></td>
+	<td align="right"><span onclick="listTable.edit(this, 'edit_show_order', {$link.link_id})">{$link.hotel_bz}</span></td>
+	<td align="right"><span onclick="listTable.edit(this, 'edit_show_order', {$link.link_id})">{$link.show_order}</span></td>
+    <td align="center"><span>
+    <a href="hotel.php?act=edit&id={$link.link_id}" title="{$lang.edit}"><img src="images/icon_edit.gif" border="0" height="16" width="16" /></a>&nbsp;
+    <a href="javascript:;" onclick="listTable.remove({$link.link_id}, '{$lang.drop_confirm}')" title="{$lang.remove}"><img src="images/icon_drop.gif" border="0" height="16" width="16" /></a></span></td>
+  </tr>
+  {foreachelse}
+    <tr><td class="no-records" colspan="10">{$lang.no_links}</td></tr>
+  {/foreach}
+  <tr>
+    <td align="right" nowrap="true" colspan="30">{include file="page.htm"}</td>
+  </tr>
+</table>
+
+{if $full_page}
+</div>
+<!-- end ad_position list -->
+</form>
+
+<script type="text/javascript" language="JavaScript">
+  listTable.recordCount = {$record_count};
+  listTable.pageCount = {$page_count};
+
+  {foreach from=$filter item=item key=key}
+  listTable.filter.{$key} = '{$item}';
+  {/foreach}
+  {literal}
+  onload = function()
+  {
+    // 开始检查订单
+    startCheckOrder();
+  }
+  {/literal}
+</script>
+{include file="pagefooter.htm"}
+{/if}

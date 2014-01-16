@@ -1,0 +1,214 @@
+﻿/*网页样式重置reset*/
+html { font-size:1em;-webkit-tap-highlight-color:rgba(0,0,0,0); -webkit-tap-highlight:rgba(0,0,0,0);-webkit-text-size-adjust:none;}
+body { font-size:0.75em}
+label { cursor:pointer}
+a:link, a:visited { text-decoration:none}
+input,button,select,textarea{outline:none} textarea{resize:none;}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, blockquote, big, body, center, canvas, caption, cite, code, command, datalist, dd, del, details, dfn, dl, div, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, keygen, label, legend, li, meter, nav, menu, object, ol, output, p, pre, progress, q, s, samp, section, small, span, source, strike, strong, sub, sup, table, tbody, tfoot, thead, th, tr, tdvideo, tt,
+u, ul, var { margin:0; padding:0}
+
+article, aside, footer, header, hgroup, nav, section, figure, figcaption { display: block} /*html5设置*/
+
+h1, h2, h3, h4, h5, h6, th, td, table, input, button, select, textarea, sub{ font-size:1em}
+body, input, button, select, textarea, sub{ font-family:Arial, sans-serif}
+em, cite, address, optgroup { font-style:normal}
+kbd, samp, code { font-family:monospace}
+
+img, input, button, select, textarea { vertical-align:middle}
+ul, ol { list-style:none}
+img, fieldset { border:0}
+abbr, acronym { cursor:help; border-bottom:1px dotted black}
+table {	width:100%; border-spacing:0; border:0}
+table th, table td { border:0}
+legend, hr { overflow:hidden; position:absolute; top:0; left:0}
+legend, hr, caption { visibility:hidden; font-size:0; width:0; height:0; line-height:0}
+
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/*统一样式*/
+html { width: 100%; height: 100%; }
+body { margin:0 auto; background:#fff; font-family:"微软雅黑"; font-size:62.5%; background:#272524; }
+img { width:100%; }
+
+a { color:#000; text-decoration:none; }
+a:link, a:visited { text-decoration:none; }
+a:hover { text-decoration:underline; }
+.red, .red a { color:#F00; }
+.left { float:left; }
+.right { float:right; }
+.autohei { height:auto; overflow:hidden; zoom:1; }
+.clear { font-size:0; line-height:0; clear:both; overflow:hidden; zoom:1; }
+.blank { height:10px; font-size:0; line-height:0; clear:both; overflow:hidden; }
+.blank8 { height:0px; font-size:0; line-height:0; clear:both; overflow:hidden; }
+.blank1 { background:#131211; height:15px; font-size:0; line-height:0; clear:both; overflow:hidden; }
+.m_nav{ background:#f6cf44;height:80px; line-height:80px;overflow:hidden;zoom:1; width:100%;}
+.m_nav span.left{ display:inline; margin:0px 0px 0 30px;}
+.m_nav span.right a{ display:inline-block; padding:0 30px; background:#e0ab29;}
+.m_nav span.right a:hover{ text-decoration:none}
+.m_txt1{line-height:30px;padding:5px 0; height:auto; overflow:hidden;zoom:1;}
+.m_txt2{line-height:30px;padding:10px 0 0;}
+small{ font-size:20px;}
+.f18{ font-size:1.8em;}
+.f20{ font-size:2em;}
+.f22{ font-size:2.2em;}
+.f24{ font-size:2.4em;}
+.f30{ font-size:3em;}
+.f34{ font-size:3.4em; }
+
+
+.wit120{ width:120px;}
+.m_jdlist ul li{ border-top:#161616 2px solid; border-bottom:#000 2px solid; background:#131211; padding:30px;}
+.m_jdlist ul li .m_img1{ display:inline; margin-right:20px;}
+.padding_15{ padding-left:30px;}
+.padding_60{ padding-left:130px;}
+.zx1,.zx1 a{ color:#92ccbf;}
+.zx2,.zx2 a{ color:#8a8379; }
+.zx3,.zx3 a{ color:#494949; }
+.zx4,.zx4 a{ color:#fdd; }
+.zx5,.zx5 a{ color:#fff;}
+.zx6,.zx6 a{ color:#b7b2ab;}
+.zx7,.zx7 a{ color:#f4d24b;}
+.zx8,.zx8 a{ color:#131313;}
+
+.inp1{ background:none; border:none; width:auto;font-size:1.8em; height:30px; padding:0 5px; line-height:30px; color:#fff; font-family:"微软雅黑";}
+.inp2{ background:none; border:none; width:auto; text-align:right; font-size:1.8em; height:30px; padding:0 5px; line-height:30px; color:#f4d24b; font-family:"微软雅黑";}
+.inp3{ background:none; border:none; width:120px;font-size:1.8em; height:30px; padding:0 5px; line-height:30px; vertical-align:top; color:#8A8379; font-family:"微软雅黑";}
+
+.m_boxbg1{ background:#272524; padding:25px 30px;}
+.m_img2{ position:relative; width:88px; height:88px; border:#3c3a39 5px solid;}
+.touying{ position:absolute; bottom:0; left:0;width:100%;;height:18px; background:#3c3a39; opacity:0.56; filter: Alpha(Opacity=56); z-index:3 }
+.m_img2 img{ position:absolute; z-index:1; left:0; top:0;}
+.m_img2 p{ color:#fff; z-index:4; line-height:18px; position:absolute;bottom:0; text-align:center;width:100%;}
+.padding0{ padding:0;}
+ 
+ .jd_info ul li{ height:auto; overflow:hidden;zoom:1; border-bottom:#2c2b2a 1px solid; padding:20px 30px;}
+ .m_dot1{ background:url(images/detail_dot1.png) no-repeat left center; padding-left:30px}
+ .m_dot2{ background:url(images/detail_dot2.png) no-repeat left center; padding-left:30px}
+ .m_dot3{ background:url(images/detail_dot3.png) no-repeat left center; padding-left:30px}
+ .m_dot4{ background:url(images/m_dot4.png) no-repeat right center; padding-right:20px}
+ 
+ .jdlist2{ background:#302e2d;}
+ .jdlist2 ul li{ border-bottom:#222121 1px solid; padding:30px;}
+ .jdlist2 ul li span.left{ display:inline; margin:0 20px 0 0;}
+ .topclose{ padding:10px 0; height:auto; overflow:hidden;}
+  .topclose span.right{ padding-right:3px;}
+ .show{ width:96%; top:100px; margin:0 2%; z-index:6; position:fixed;top:10px}
+ .backdiv{ width:100%; position:fixed; height:100%; z-index:5; top:0px; left:0; background:#000;opacity:0.72; filter: Alpha(Opacity=72);}
+ .hide{ display:none}
+ 
+ 
+ 
+ 
+ .icon1{ background:url(images/icon1.png) no-repeat left center; padding-left:30px;}
+ .icon2{ background:url(images/icon2.png) no-repeat left center; padding-left:30px;}
+ .icon3{ background:url(images/icon3.png) no-repeat left center; padding-left:30px;}
+ .icon4{ background:url(images/icon4.png) no-repeat left center; padding-left:30px;}
+ .icon5{ background:url(images/icon5.png) no-repeat left center; padding-left:30px;}
+ .icon6{ background:url(images/icon6.png) no-repeat left center; padding-left:30px;}
+ .icon7{ background:url(images/icon7.png) no-repeat left center; padding-left:30px;}
+ .icon8{ background:url(images/icon8.png) no-repeat left center; padding-left:30px;}
+ 
+ .jdxq ul { background:#adaaa4}
+ .jdxq ul li{ height:auto; overflow:hidden;zoom:1; padding:10px 5%}
+ .jdxq ul li div.left{ width:50%;}
+ .price1{ background:#2a2a2a; padding:10px 5%; line-height:42px;}
+ 
+ .beizhu{ background:#131211; padding:20px 10px;}
+ .beizhubox { background:#494746; padding:10px;}
+ .beizhubox p{ color:#8a8987; font-size:2.4em;}
+ 
+ .foot_dd{ height:80px; line-height:80px; background:#f4c647; width:100%; z-index:8;}
+ .foot_dd span.left{ padding-left:30px;}
+ 
+ /*日历*/
+ .Zebra_DatePicker{font-size:1.8em;}
+.Zebra_DatePicker *,
+.Zebra_DatePicker *:after,
+.Zebra_DatePicker *:before  { -moz-box-sizing: content-box !important; -webkit-box-sizing: content-box !important; box-sizing: content-box !important }
+
+.Zebra_DatePicker           { position: absolute; background: #fff; border: 1px solid #d4d4d4; display: none; z-index: 100; padding:10px; width:540px; left:50% !important; margin-left:-280px;}
+
+.Zebra_DatePicker *         { margin: 0; padding: 0; color: #444; background: transparent; border: none }
+
+/* = GLOBALS
+----------------------------------------------------------------------------------------------------------------------*/
+.Zebra_DatePicker table                      { border-collapse: collapse; border-spacing: 0 ;}
+
+.Zebra_DatePicker td,
+.Zebra_DatePicker th                         { text-align: center; padding: 5px 0 }
+
+.Zebra_DatePicker td                         { cursor: pointer }
+.Zebra_DatePicker .dp_daypicker{height:500px;}
+.Zebra_DatePicker .dp_daypicker,
+.Zebra_DatePicker .dp_monthpicker,
+.Zebra_DatePicker .dp_yearpicker             { margin-top: 3px }
+
+.Zebra_DatePicker .dp_daypicker td,
+.Zebra_DatePicker .dp_daypicker th,
+.Zebra_DatePicker .dp_monthpicker td,
+.Zebra_DatePicker .dp_yearpicker td         { background: #E8E8E8; width: 30px; border: 1px solid #d4d4d4 }
+
+.Zebra_DatePicker,
+.Zebra_DatePicker .dp_header .dp_hover,
+.Zebra_DatePicker .dp_footer .dp_hover { -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px }
+
+
+/* = HEADER
+----------------------------------------------------------------------------------------------------------------------*/
+.Zebra_DatePicker .dp_header td             { color: #444 }
+
+.Zebra_DatePicker .dp_header .dp_previous,
+.Zebra_DatePicker .dp_header .dp_next       { width: 30px }
+
+.Zebra_DatePicker .dp_header .dp_caption    { font-weight: bold }
+.Zebra_DatePicker .dp_header .dp_hover      { background: #D8D8D8; color: #FFF }
+.Zebra_DatePicker .dp_header .dp_blocked    { color: #888; cursor: default }
+
+/* = DATEPICKER
+----------------------------------------------------------------------------------------------------------------------*/
+.Zebra_DatePicker .dp_daypicker th              { background: #fff }
+.Zebra_DatePicker td.dp_not_in_month            { background: #F3F3F3; color: #CDCDCD; cursor: default }
+.Zebra_DatePicker td.dp_not_in_month_selectable { background: #F3F3F3; color: #CDCDCD; cursor: pointer }
+.Zebra_DatePicker td.dp_weekend                 { background: #D8D8D8 }
+.Zebra_DatePicker td.dp_weekend_disabled        { color: #CCC; cursor: default }
+.Zebra_DatePicker td.dp_selected                { background: #5A4B4B; color: #FFF !important }
+.Zebra_DatePicker td.dp_week_number             { background: #FFCC33; color: #555; cursor: text; font-style: italic }
+
+/* = MONTHPICKER
+----------------------------------------------------------------------------------------------------------------------*/
+.Zebra_DatePicker .dp_monthpicker td        { width: 33% }
+
+/* = YEARPICKER
+----------------------------------------------------------------------------------------------------------------------*/
+.Zebra_DatePicker .dp_yearpicker td         { width: 33% }
+
+/* = FOOTER
+----------------------------------------------------------------------------------------------------------------------*/
+.Zebra_DatePicker .dp_footer                { margin-top: 3px }
+.Zebra_DatePicker .dp_footer td             { color: #444; padding: 2px; font-weight: bold }
+.Zebra_DatePicker .dp_footer .dp_hover      { background: #d8d8d8; color: #FFF }
+
+/* = SOME MORE GLOBALS (MUST BE LAST IN ORDER TO OVERWRITE PREVIOUS PROPERTIES)
+----------------------------------------------------------------------------------------------------------------------*/
+.Zebra_DatePicker td.dp_current             { color: #C40000 }
+.Zebra_DatePicker td.dp_disabled_current    { color: #E38585 }
+.Zebra_DatePicker td.dp_disabled{ background: #F3F3F3; color: #CDCDCD; cursor: default }
+.Zebra_DatePicker td.dp_hover               { background: #4EC661; color: #FFF }
+.Zebra_DatePicker td.nohometime {cursor: pointer;background: #FFF2E0;color: #444;}
+
+/* = ICON
+----------------------------------------------------------------------------------------------------------------------*/
+button.Zebra_DatePicker_Icon                { display: inline-block; position: absolute; width: 18px; height: 18px; text-indent: -9000px; border: none; cursor: pointer; padding: 0; line-height: 0; vertical-align: top; zoom: 1; *display: inline;width:18px;height:18px;background-position: 1px -25px;top:7px;right: -11px;}
+button.Zebra_DatePicker_Icon_Disabled       { background-image: url('calendar-disabled.png') }
+/* don't set vertical margins! */
+button.Zebra_DatePicker_Icon                { margin: 0 0 0 3px }
+button.Zebra_DatePicker_Icon_Inside         { margin: 0 3px 0 0 }
+
+.sel1{ background:#272524; border:none; }
+.sel1 option{ color:#F4D24B}
+
+
+.padding10{ padding:10px;}
+.share_tit1{ text-align:center; color:#fff; margin:20px auto;font-size:4em}
+.share_body { color:#fff; padding:20px;}
+.share_body p{width:100%;display:block; text-indent:24px;color:#fff; font-size:2.4em; line-height:35px;}
